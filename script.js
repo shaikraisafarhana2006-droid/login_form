@@ -5,14 +5,13 @@ e.preventDefault()
 let user=document.getElementById("username").value
 let pass=document.getElementById("password").value
 
-if(user=="admin" && pass=="1234"){
-    document.getElementById("message").innerText="Login Successful"
+if(user==="admin" && pass==="1234"){
+document.getElementById("message").innerText="Login Successful"
+document.getElementById("message").style.color="green"
 }
 else{
-    document.getElementById("message").innerText="Invalid Credentials"
+document.getElementById("message").innerText="Invalid Credentials"
+document.getElementById("message").style.color="red"
 }
 
 })
-
-// MY LOGIN FORM
-// THIS IS GIT PRACTISE FOLDER 
