@@ -1,17 +1,34 @@
-document.getElementById("loginForm").addEventListener("submit",function(e){
+const form = document.getElementById("loginForm")
+
+form.addEventListener("submit", function(e){
 
 e.preventDefault()
 
-let user=document.getElementById("username").value
-let pass=document.getElementById("password").value
+let username=document.getElementById("username").value
+let password=document.getElementById("password").value
+let message=document.getElementById("message")
 
-if(user==="Raisa" && pass==="1234"){
-document.getElementById("message").innerText="Login Successful"
-document.getElementById("message").style.color="green"
+if(username==="admin" && password==="1234"){
+message.innerText="Login Successful"
+message.style.color="lightgreen"
 }
 else{
-document.getElementById("message").innerText="Invalid Credentials"
-document.getElementById("message").style.color="red"
+message.innerText="Invalid Credentials"
+message.style.color="red"
+}
+
+})
+
+const togglePassword=document.getElementById("togglePassword")
+const passwordField=document.getElementById("password")
+
+togglePassword.addEventListener("click",function(){
+
+if(passwordField.type==="password"){
+passwordField.type="text"
+}
+else{
+passwordField.type="password"
 }
 
 })
